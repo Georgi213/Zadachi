@@ -1,0 +1,7 @@
+C:\Users\opilane\source\repos\Zadachi\Zadachi\bin\Debug\Zadachi.exe.config
+C:\Users\opilane\source\repos\Zadachi\Zadachi\bin\Debug\Zadachi.exe
+C:\Users\opilane\source\repos\Zadachi\Zadachi\bin\Debug\Zadachi.pdb
+C:\Users\opilane\source\repos\Zadachi\Zadachi\obj\Debug\Zadachi.csprojAssemblyReference.cache
+C:\Users\opilane\source\repos\Zadachi\Zadachi\obj\Debug\Zadachi.csproj.CoreCompileInputs.cache
+C:\Users\opilane\source\repos\Zadachi\Zadachi\obj\Debug\Zadachi.exe
+C:\Users\opilane\source\repos\Zadachi\Zadachi\obj\Debug\Zadachi.pdb
