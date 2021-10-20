@@ -8,77 +8,90 @@ namespace Zadachi
 {
     class Program
     {
-        static int Saali_suurus()
+        public static int Saali_suurus()
         {
-            Console.WriteLine("Vali saali suurus:1,2,3");
-            int suurus = int.Parse(Console.ReadLine());
-            return suurus;
+            Console.WriteLine("Razmer Zala [1,2,3]");
+            int a = int.Parse(Console.ReadLine());
+            return a;
         }
         static int[,] saal = new int[,] { };
         static int kohad, read;
-        static void Saali_taitmine(int suurus)
+        public static void Saali_taitmine(int a)
         {
             Random rnd = new Random();
-            if (suurus == 1)
-            { kohad = 20; read = 10; }
-            else if (suurus == 2)
-            { kohad = 20; read = 20; }
+            if (a==1)
+            {
+                kohad = 30;
+                read = 20;
+
+            }
+            else if (a==2)
+            {
+                kohad = 60;
+                read = 50;
+            }
             else
             {
-                kohad = 30; read = 20;
+                kohad = 30;
+                read = 26;
             }
             saal = new int[read, kohad];
-            for(int rida = 0; rida < read; rida++)
+
+            for (int rida = 0; rida < read; rida++)
             {
-                for(int koht = 0; koht < kohad; koht++)
+                for (int koht = 0; koht < kohad; koht++)
                 {
                     saal[rida, koht] = rnd.Next(0, 2);
                 }
-
-
             }
-
+            
         }
-        static void Saal_ekraanile()
+        public static void Saal_ekraanile()
         {
-            for(int rida = 0; rida < read; rida++)
+            for (int rida = 0; rida < read; rida++)
             {
-                for(int koht = 0; koht < kohad; koht++)
+                for (int koht = 0; koht < kohad; koht++)
                 {
-                    Console.Write(saal[rida,koht]);
+                    Console.Write(saal[rida, koht]);
                 }
-                Console.WriteLine();
-
             }
-
+            Console.WriteLine();
         }
         static bool Muuk()
         {
-            Console.WriteLine("rida:");
-            int pileti_rida = int.Parse(Console.ReadLine());
-            Console.WriteLine("koht:");
-            int pileti_koht = int.Parse(Console.ReadLine());
-            if (saal[pileti_koht-1,pileti_rida-1]==0)
+            Console.WriteLine("sisesta rida");
+            int rida1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("sisesta koht");
+            int koht1 = int.Parse(Console.ReadLine());
+
+            if (saal[rida1-1,koht1-1]==0)
+
             {
-                saal[pileti_koht - 1, pileti_rida - 1] = 1;
+                saal[rida1 - 1, koht1 - 1] = 1;
                 return true;
+                Console.WriteLine("Bilet kuplen");
             }
             else
             {
                 return false;
+                Console.WriteLine("mesto zanato");
+
             }
+
+
         }
         static void Main(string[] args)
         {
             int suurus = Saali_suurus();
+
             Saali_taitmine(suurus);
-            while(true)
+            while (true)
             {
                 Saal_ekraanile();
                 bool ost = Muuk();
                 Console.WriteLine(ost);
             }
-            Console.ReadKey();
+            Console.ReadLine();
         }   
     }
 }
